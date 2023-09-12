@@ -64,6 +64,9 @@ createApp({
                 app.next();
             }, 3000);
         },
+        stopPlay() {
+            clearInterval(this.timer);
+        }
     }
 }).mount('#app')
 
