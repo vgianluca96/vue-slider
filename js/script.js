@@ -47,6 +47,9 @@ createApp({
             if(this.activeSlide > this.slides.length - 1) {
                 this.activeSlide = 0;
             }
+        },
+        thisActive(x) {
+            this.activeSlide = x;
         }
     }
 }).mount('#app')
