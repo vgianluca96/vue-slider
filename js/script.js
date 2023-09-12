@@ -36,6 +36,9 @@ createApp({
             timer: 0
         }
     },
+    mounted() {
+        this.resetPlay();
+    },
     methods: {
         prev() {
             this.activeSlide--
@@ -51,7 +54,6 @@ createApp({
         },
         thisActive(x) {
             this.activeSlide = x;
-            this.resetPlay();
         },
         resetPlay() {
             clearInterval(this.timer);
@@ -59,14 +61,13 @@ createApp({
         },
         play() {
             let app = this;
-            console.log('ciao')
             this.timer = setInterval(function () {
                 app.next();
             }, 3000);
         },
         stopPlay() {
             clearInterval(this.timer);
-        }
+        },
     }
 }).mount('#app')
 
