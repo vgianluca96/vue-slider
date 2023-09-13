@@ -33,24 +33,10 @@
 
                     <div class="next" @click="next()"></div>
 
-                    <div class="thumb" :class="{ active: activeSlide == 0}" @click="thisActive(0)">
-                        <img src="img/01.webp" alt="Svezia" />
+                    <div v-for="(item,index) in slides" class="thumb" :class="{ active: activeSlide == index}" @click="thisActive(index)">
+                        <img :src="item.image" alt="" />
                     </div>
 
-                    <div class="thumb" :class="{ active: activeSlide == 1}" @click="thisActive(1)">
-                        <img src="img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-
-                    <div class="thumb" :class="{ active: activeSlide == 2}" @click="thisActive(2)">
-                        <img src="img/03.webp" alt="Fortnite" />
-                    </div>
-
-                    <div class="thumb" :class="{ active: activeSlide == 3}" @click="thisActive(3)">
-                        <img src="img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb" :class="{ active: activeSlide == 4}" @click="thisActive(4)">
-                        <img src="img/05.webp" alt="Avengers" />
-                    </div>
                 </div>
 
             </div>
